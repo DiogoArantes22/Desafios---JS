@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antes e depois</title>
+    <style>
+        button{
+            padding: 30px;
+            font-size:20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio do antes e depois</h1>
+    <button onclick="Botao()">Antes e depois </button>
+
+<script>
+    function Botao() 
+    {
+        let numero = Number (window.prompt('Digite um número!'))
+        window.alert (`Antes de ${numero}, temos o número ${numero-1} Depois de ${numero}, temos o número ${numero+1}`)
+    }
+</script>
+</body>
+</html>
