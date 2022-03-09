@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio troco</title>
+    <style>
+        button{
+            padding: 30px;
+            font-size:20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Site para calcular troco</h1>
+    <button onclick="botao()">Clique para calcular o troco</button>
+    <script>
+        function botao()
+        {
+            let nomep = window.prompt('Qual o produto que está comprando?')
+            let valorp = window.prompt(`Quato custa ${nomep} que voce esta comprando?`)
+            let din = window.prompt(`Qual o valor que voce deu para pagar ${nomep}`)
+            window.alert(`Você comprou ${nomep} que custou R$${valorp}, voce deu R$${din}, e vai receber de troco R$${din - valorp}`)
+        }
+    </script>
+</body>
+</html>
