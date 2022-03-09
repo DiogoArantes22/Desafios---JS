@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Coversor</title>
+    <style>
+        button{
+            padding: 30px;
+            font-size:20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Medidas</h1>
+    <button onclick="botao()">Converter</button>
+    <section id = "res">  
+        <p>resultado da conversão</p>
+    </section>
+
+<script>
+    function botao()
+    {
+       let medida = Number (window.prompt('Digite uma distância em metros (m)'))
+       let res = document.getElementById ('res')
+       res.innerHTML = `<h1>A distância de ${medida} metros, corresponde a...</h1><br>
+       <p>
+        ${medida/1000} quilômetros (KM) <br>
+        ${medida/100} hectômetro (Hm) <br>
+        ${medida/10} decâmetro (Dam) <br>
+        ${medida*10} decímetro (dm) <br>
+        ${medida*100} centímetro (cm) <br>
+        ${medida*1000} milímetros (mm)
+        </p>`
+    }
+</script>
+</body>
+</html>
