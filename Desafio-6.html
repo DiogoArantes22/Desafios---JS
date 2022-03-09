@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Coversor</title>
+    <style>
+        button{
+            padding: 30px;
+            font-size:20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Temperatura</h1>
+    <button onclick="botao()">Converter</button>
+    <section id = "res">  
+        <p>resultado da conversão</p>
+    </section>
+
+<script>
+    function botao()
+    {
+       let temperatura = Number (window.prompt('Digite uma distância em metros (Cº)'))
+       let res = document.getElementById ('res')
+       res.innerHTML = `<h1>A temperatura de ${temperatura} celsius, corresponde a...</h1><br>
+       <p>
+        ${temperatura * 9/5 + 32} Fahrenheit(F) <br>
+        ${temperatura + 273} Kelvin (k) <br>
+        </p>`
+    }
+</script>
+</body>
+</html>

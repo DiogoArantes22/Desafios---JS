@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Coversor</title>
+    <style>
+        button {
+            padding: 30px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calcular desconto</h1>
+    <button onclick="botao()">Desconto de 10%</button>
+    <section id="res">
+        <p>Clique no botão acima para iniciar</p>
+    </section>
+    <script>
+
+        
+        function botao() {
+
+            let produto = String(window.prompt('Qual o produto q vc esta comprando?'))
+            let preço = Number(window.prompt(`Qual o preço do produto ${produto}?`))
+            let res = document.getElementById('res')
+            res.innerHTML = `<h1> Calculando 10% de desconto do ${produto} </h1><br>
+       <p>
+        <p>O preço original era ${preço}<br></p>
+        <p>O preço com desconto é ${preço * 10 / 100} com 10%<br></p>
+        <p>No fim voce vai pagar${(preço * 10 / 100)- preço} com 10%<br></p>
+
+
+
+
+
+        `
+        }
+    </script>
+</body>
+
+</html>

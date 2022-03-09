@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Coversor</title>
+    <style>
+        button {
+            padding: 30px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Conversor R$ -> US$</h1>
+    <button onclick="botao()">Converter</button>
+    <section id="res">
+        <p>Clique no botão acima para iniciar</p>
+    </section>
+    <script>
+
+        let dolar = Number(window.prompt('Antes de mais nada quanto está a cotação do dolar?'))
+        function botao() {
+            let real = Number(window.prompt('Quantos reais você tem na carteira?'))
+            let res = document.getElementById('res')
+            res.innerHTML = `<h1> Voce tem ${real/dolar} dolar </h1><br>
+       <p>
+        `
+        }
+    </script>
+</body>
+
+</html>

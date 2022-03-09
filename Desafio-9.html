@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Coversor</title>
+    <style>
+        button {
+            padding: 30px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Reajuste salarial</h1>
+    <button onclick="botao()">Reajustar salario</button>
+    <section id="res">
+        <p>Clique no botão acima para iniciar o reajuste</p>
+    </section>
+    <script>
+
+        
+        function botao() {
+
+            let nome = String(window.prompt('Qual o nome do funcionario?'))
+            let salario = Number(window.prompt(`Qual o salario do funcionario ${nome}?`))
+            let rea = Number(window.prompt(`o salario de ${nome} vai ser reajustado em quantos %?`))
+            let res = document.getElementById('res')
+            res.innerHTML = `<h1>  ${nome} recebeu um reajuste salarial! </h1><br>
+       <p>
+        <p>O salario atual era ${salario}<br></p>
+        <p>Com um aumento de  ${rea}%, o salario vai aumentar${salario * rea / 100} no proximo mes<br></p>
+        <p>Salario reajustado para ${nome}, atual ${(salario * rea / 100) + salario} com 10%<br></p>
+
+
+
+
+
+        `
+        }
+    </script>
+</body>
+
+</html>
